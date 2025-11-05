@@ -40,7 +40,7 @@ const rmt_transmit_config_t owtxconf = {
 	.loop_count = 0,
 	.flags = {
 		.eot_level = 1,
-		.queue_nonblocking = false
+		.queue_nonblocking = true
 	}
 };
 const rmt_receive_config_t owrxconf = {
