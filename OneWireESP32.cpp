@@ -83,7 +83,9 @@ OneWire32::OneWire32(uint8_t pin){
 			.invert_in = 0,
 			.with_dma = 0,
 			.io_loop_back = 0,
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5, 4, 0)
 			.allow_pd = 0
+#endif
 		}
 	};
 
@@ -103,7 +105,9 @@ OneWire32::OneWire32(uint8_t pin){
 			.with_dma = 0,
 			.io_loop_back = 1,
 			.io_od_mode = 1,
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5, 4, 0)
 			.allow_pd = 0
+#endif
 		}
 	};
 
